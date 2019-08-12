@@ -1,0 +1,148 @@
+@import '../../app/style_utilities/variables';
+
+p, span, a, ul, li, button {
+	font-family: inherit;
+	font-size: inherit;
+	font-weight: inherit;
+	line-height: inherit;
+}
+
+h3 {
+    margin: 0;
+    font-size: 18px;
+    font-size: 1.8rem;
+    line-height: 18px;
+    font-weight: 300;
+}
+
+a:link {
+    text-decoration: none;
+  }
+
+  .tile {  
+      width: 100%;
+      display: inline-block;
+      padding: 20px;
+      margin-bottom: 10px;
+    
+    .title {
+          margin-top: 0px;
+          font-size: 16px;
+          line-height: 16px;
+          font-size: 1.6rem;
+      }
+    
+    &.purple, &.blue, &.red, &.orange, &.green {
+      color: #707070
+    }
+    
+    &.purple {
+      border-left: 5px solid $color_purple;
+  
+          &:hover {
+              background: darken($color_purple, 10%);
+          }		
+    }
+    
+    &.red {
+        border-left: 5px solid $color_red;
+  
+          &:hover {
+              background: darken($color_red, 10%);
+          }		
+    }
+    
+    &.green {
+        border-left: 5px solid $color_green;
+  
+          &:hover {
+              background: darken($color_green, 10%);
+          }		
+    }
+    
+    &.blue {
+        border-left: 5px solid $color_blue;
+  
+          &:hover {
+              background: darken($color_blue, 10%);
+          }	
+    }
+    
+    &.orange {
+        border-left: 5px solid $color_orange;
+  
+          &:hover {
+              background: darken($color_orange, 10%);
+          }	
+    }
+  }
+
+  .account-wrapper {
+    margin: 0 0 10px;
+    border: 1px solid #e4e1e1;
+    background: #fff;
+    -webkit-box-shadow: 0 1px 3px 0 #eaeaea;
+    -moz-box-shadow: 0 1px 3px 0 #eaeaea;
+    box-shadow: 0 1px 3px 0 #eaeaea;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+  }
+
+    .card {
+        float: left;
+        width: 60px;
+        margin: 0 8px 0 0;
+        height: auto;
+    }
+    img {
+        max-width: 100%;
+        height: auto!important;
+    }
+    .type {
+        font-size: 11px;
+        line-height: 15px;
+        font-size: 1.1rem;
+    }
+    .more {
+        font-size: 11px;
+        line-height: 11px;
+        font-size: 1.1rem;
+        font-weight: bold;
+        color: #8a898a;
+    }
+    .light {
+        font-weight: lighter;
+    }
+
+        .amount {
+            margin: 8px 0 0;
+            font-weight: 300;
+            text-align: right;
+        }
+        .amount label {
+            color: #999;
+        }
+        label {
+            margin: 0;
+            display: inline-block;
+            font-size: 11px;
+            line-height: 13px;
+            font-size: 1.1rem;
+            font-weight: 300;
+        }
+        .amount .value {
+            color: #666;
+        }
+        .value {
+            line-height: 18px;
+            font-size: 1.8rem;
+        }
+        .value .sub {
+            font-size: 11px;
+            line-height: 11px;
+            font-size: 1.1rem;
+        }
+        .colored {
+            color: #a381b8;
+        }

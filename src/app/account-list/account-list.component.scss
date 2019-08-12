@@ -1,0 +1,23 @@
+@import '../../app/style_utilities/variables';
+
+p, span, a, ul, li, button {
+	font-family: inherit;
+	font-size: inherit;
+	font-weight: inherit;
+	line-height: inherit;
+}
+
+strong {
+	font-weight: 600;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: $display_font_family;
+	line-height: $base_line_height;
+	font-weight: 300;	
+}
+
+strong {
+  font-weight: 400;
+}
+

@@ -1,1 +1,11 @@
-/* You can add global styles to this file, and also import other style files */
+@import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
+@import '../src/app/style_utilities/variables';
+
+body {
+    font: 14px/17px 'CustomCalibri','Calibri',Arial,'Carlito',Helvetica,sans-serif;
+    font-weight: normal;
+    background: #f2f2f2;
+    color: #666;
+    height: 100%;
+    width: 100%;
+}
