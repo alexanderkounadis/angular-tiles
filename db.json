@@ -1,8 +1,8 @@
 {
     "accounts": [
-      { "id": 1, "title": "account1", "balance": "1234.56", "color":"green" },
-      { "id": 2, "title": "account2", "balance": "124.56", "color":"blue" },
-      { "id": 3, "title": "account3", "balance": "134.56", "color":"orange" },
+      { "id": 1, "title": "account1", "balance": "1234.56", "color":"pink" },
+      { "id": 2, "title": "account2", "balance": "124.56", "color":"yellow" },
+      { "id": 3, "title": "account3", "balance": "134.56", "color":"red" },
       { "id": 4, "title": "account4", "balance": "34.56" , "color":"purple"}
     ]
   }

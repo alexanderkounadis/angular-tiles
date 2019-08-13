@@ -7,4 +7,12 @@
     </div>
   </div>
   <app-account-tile *ngFor="let acc of accounts" [account]="acc"></app-account-tile>
+  <div class="row">
+    <div class="col-md-6 offset-md-3 text-right">
+      <button (click)="showAccountPreferencesComponent()" class="btn btn-link">
+          Επιλογές Απόκρυψης
+      </button>
+        
+    </div>  
+  </div>
 </div>
