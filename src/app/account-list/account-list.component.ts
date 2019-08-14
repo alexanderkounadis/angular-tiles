@@ -3,6 +3,7 @@ import { AccountService } from '../shared/services/account.service';
 import { Account } from '../../app/shared/models/account';
 import { MatDialog, MatDialogConfig } from '@angular/material';
 import { AccountPreferenceDialogComponent } from '../account-preference-dialog/account-preference-dialog.component';
+import { NgxSpinnerService } from 'ngx-spinner';
 
 @Component({
   selector: 'app-account-list',
@@ -10,27 +11,41 @@ import { AccountPreferenceDialogComponent } from '../account-preference-dialog/a
   styleUrls: ['./account-list.component.scss']
 })
 export class AccountListComponent implements OnInit {
-  accounts: Account[] = [];
+  visibleAccounts: Account[] = [];
+  allAccounts: Account[] = [];
+  loading: boolean = true;
+
   constructor(private accountService: AccountService, 
-              private dialog: MatDialog) { }
+              private dialog: MatDialog,
+              private spinner: NgxSpinnerService) { }
 
   ngOnInit() {
-    this.loadAccounts();
+    this.spinner.show();
+    setTimeout(() => {
+      this.loadAccounts();
+    }, 3000);
   }
 
   loadAccounts() {
     this.accountService.accounts.subscribe(response => {
-      this.accounts = response
+      this.loading = false;
+      this.spinner.hide();
+      this.allAccounts = response;
+      this.visibleAccounts = this.allAccounts.filter(acc => acc.visible === true);
     });
   }
 
   showAccountPreferencesComponent() {
-    const dialogConfig = new MatDialogConfig();
-    dialogConfig.disableClose = true;
-    dialogConfig.autoFocus = true;
-    dialogConfig.width = '350px';
-    dialogConfig.height= '500px';
-    this.dialog.open(AccountPreferenceDialogComponent, dialogConfig);
+    this.dialog.open(AccountPreferenceDialogComponent, this.getDialogConfigObject());
   }
 
+  getDialogConfigObject(): MatDialogConfig {
+    const dialogConfig = new MatDialogConfig();
+    dialogConfig.disableClose = false;
+    dialogConfig.autoFocus = true;
+    dialogConfig.width = '700px';
+    dialogConfig.height= '400px';
+    dialogConfig.data = {allAccounts : this.allAccounts}
+    return dialogConfig;
+  }
 }

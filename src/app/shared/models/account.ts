@@ -3,4 +3,5 @@ export class Account {
     title: string;
     balance: number;
     color: string;
+    visible: boolean
 }

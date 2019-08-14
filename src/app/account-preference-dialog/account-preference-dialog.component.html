@@ -1,3 +1,4 @@
-<p>
-  account-preference-dialog works!
-</p>
+<ng-container *ngFor="let acc of data.allAccounts">
+    <app-account-tile  [account]="acc" [editMode]="true">
+      </app-account-tile>
+  </ng-container>

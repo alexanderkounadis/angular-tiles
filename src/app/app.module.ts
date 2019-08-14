@@ -8,7 +8,9 @@ import { HttpClientModule } from '@angular/common/http';
 import { AccountTileComponent } from './account-tile/account-tile.component';
 import { AngularFontAwesomeModule } from 'angular-font-awesome';
 import {MatDialogModule} from "@angular/material";
+import { NgxSpinnerModule } from "ngx-spinner";
 import { AccountPreferenceDialogComponent } from './account-preference-dialog/account-preference-dialog.component';
+import { MatSlideToggleChange,MatSlideToggleModule } from '@angular/material/slide-toggle';
 @NgModule({
    declarations: [
       AppComponent,
@@ -21,7 +23,9 @@ import { AccountPreferenceDialogComponent } from './account-preference-dialog/ac
       HttpClientModule,
       AngularFontAwesomeModule,
       MatDialogModule,
-      BrowserAnimationsModule
+      BrowserAnimationsModule,
+      NgxSpinnerModule,
+      MatSlideToggleModule
    ],
    providers: [
       AccountService
@@ -29,6 +33,8 @@ import { AccountPreferenceDialogComponent } from './account-preference-dialog/ac
    bootstrap: [
       AppComponent
    ],
-   entryComponents: [AccountPreferenceDialogComponent]
+   entryComponents: [
+      AccountPreferenceDialogComponent
+   ]
 })
 export class AppModule { }

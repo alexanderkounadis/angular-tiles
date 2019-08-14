@@ -1,8 +1,10 @@
 {
     "accounts": [
-      { "id": 1, "title": "account1", "balance": "1234.56", "color":"pink" },
-      { "id": 2, "title": "account2", "balance": "124.56", "color":"yellow" },
-      { "id": 3, "title": "account3", "balance": "134.56", "color":"red" },
-      { "id": 4, "title": "account4", "balance": "34.56" , "color":"purple"}
+      { "id": 1, "title": "account1", "balance": "1234.56", "color":"pink", "visible":true },
+      { "id": 2, "title": "account2", "balance": "124.56", "color":"yellow", "visible": false },
+      { "id": 3, "title": "account3", "balance": "134.56", "color":"red", "visible":true },
+      { "id": 4, "title": "account4", "balance": "34.56" , "color":"purple", "visible":true},
+      { "id": 5, "title": "account5", "balance": "234.56" , "color":"purple", "visible":false},
+      { "id": 6, "title": "account6", "balance": "434.56" , "color":"blue", "visible":true}
     ]
   }
